@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch GitHub Data</title>
+    <link rel="stylesheet" href="src/style/main.css" />
+    <script src="client.js" defer></script>
+    <!-- Learn More About HTML5shiv: - https://github.com/aFarkas/html5shiv -->
+    <!--[if lt IE 9]>
+      <script src="src/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <header class="lead">
+        <div class="text">
+          <code>
+            fetch('https://api.github.com/users/<mark class="user_in_code"
+              >${username}</mark
+            >/repos')
+          </code>
+          <h1>Fetch Your GitHub Data</h1>
+        </div>
+        <p>
+          This project leet you fetch your GitHub data from your API data file,
+          <br />
+          enter your username to get your dummy data ✨.
+        </p>
+        <main>
+          <label>
+            <form class="form" action="">
+              <input
+                data-username
+                type="text"
+                placeholder="/username"
+                class="username"
+              />
+              <input
+                data-submit
+                class="submit"
+                type="submit"
+                value="fetch data"
+              />
+            </form>
+          </label>
+        </main>
+      </header>
+      <section class="content_api">
+        <h1>Hi, <span id="name_after_fetch_data"></span> 👋</h1>
+        <p>Here is all your <span id="size"></span> project repository:</p>
+        <div class="info_user">
+          <ul class="avatar">
+            <li>
+              <img id="avatar_name" src="" alt="" />
+            </li>
+            <li>
+              <h2><a href="#" id="name_avatar"></a></h2>
+            </li>
+          </ul>
+          <section class="repos" id="repos"></section>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
